@@ -1,7 +1,6 @@
 <template>
 <nav 
-class="grid-container"
-:style="{height: gridHeight}"
+
 >
     <li v-for="window in windows" :key="window.key">
         <button v-if="window.showInNavbar !=false" class="icon" @touchstart="openWindow(window.windowId)" @dblclick="openWindow(window.windowId)">
@@ -59,8 +58,7 @@ export default {
         }
     },
     mounted() {
-        // let gridH =  this.$store.getters.getFullscreenWindowHeight
-        // this.gridHeight = gridH.substring(0, gridH.length - 2) - 60 + 'px'
+       
     },
 }
 </script>

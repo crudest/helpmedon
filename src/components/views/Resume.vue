@@ -23,6 +23,8 @@
 </template>
 
 <style scoped>
+
+
 .download {
     vertical-align: middle;
     box-shadow: 1.5px 1.5px black;
@@ -83,4 +85,6 @@
     width: 100%;
     height: 97.5%;
 }
+
+
 </style>

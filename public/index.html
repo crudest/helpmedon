@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        #logo-container {
+            position: relative;
+            text-align: center;
+        }
+
+        #logo {
+            position: absolute;
+            left: 50%;
+            margin-top: 35px;
+            transform: translateX(-50%);
+            max-width: 18%;
+        }
+
+        #about-me {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            
+            padding: 20px;
+            font-weight: bold;
+            background: rgba(0, 0, 0, 0);
+            width: 50%;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        #about-me h1 {
+            color: #fbd304;
+            padding: 10px;
+        }
+
+        #about-me p {
+            color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175476597-1"></script>
     <script src="reg.js"></script>
     <script>
@@ -18,18 +59,27 @@
     <meta name = "viewport" content = "width=device-width, minimum-scale=1.0, maximum-scale = 1.0, user-scalable = no">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/@zaydek/duomo@0.7.10/dist/duomo-full.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.css">
-    <title>Don Chia</title>
+    <title>Spudnik Donuts</title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <div id="logo-container">
+      <a href="http://www.spudnikdonuts.com/menu">
+          <img src="logopixelated.png" alt="Logo" id="logo">
+      </a>
+  </div>
+  <div id="about-me">
+    <h1>Greetings, Earthlings</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec risus lacinia, accumsan lorem sit amet, feugiat leo. Proin scelerisque nunc ac ipsum ultricies tincidunt.
+      
+    </p>
+</div>
+<div id="app"></div>
+</body>
 </html>

@@ -120,6 +120,10 @@ import Webos from './components/template/WebOS'
 import Opensource from './components/views/Opensource'
 import Wwdc2021 from './components/views/Wwdc2021'
 import Wwdc2022 from './components/views/Wwdc2022'
+import menud from './components/template/menud.vue'
+import menux from './components/template/menux.vue'
+import menington from './components/template/menington.vue'
+
 export default {
     name: 'App',
     data: function () {
@@ -142,7 +146,11 @@ export default {
         Webos,
         Opensource,
         Wwdc2021,
-        Wwdc2022
+        Wwdc2022,
+        menud,
+        menux,
+        menington
+        
         // TopNavbar,
     },
     computed: {

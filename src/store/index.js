@@ -21,7 +21,7 @@ export default new Vuex.Store({
       {
         windowId: "BiographyWindow", // Unique ID
         windowState: "close", // Window State [open, close, minimize]
-        displayName: "Biography", // Display Name (title under icon)
+        displayName: "Home", // Display Name (title under icon)
         windowComponent: 'window', // Window Component (can be changed to use modified windows)
         windowContent: 'bio', // Window Content (used under slots)
         windowContentPadding: {
@@ -40,9 +40,9 @@ export default new Vuex.Store({
       {
         windowId: "ResumeWindow", // Unique ID
         windowState: "close", // Window State [open, close, minimize]
-        displayName: "Résumé", // Display Name (title under icon)
-        windowComponent: 'window', // Window Component (can be changed to use modified windows)
-        windowContent: 'resume', // Window Content (used under slots)
+        displayName: "Menu", // Display Name (title under icon)
+        windowComponent: 'menux', // Window Component (can be changed to use modified windows)
+        windowContent: '', // Window Content (used under slots)
         windowContentPadding: {
           top: '0',
           right: '0',
@@ -50,107 +50,13 @@ export default new Vuex.Store({
           left: '0'
         }, // Window Content Padding 
         position: "absolute", // Window Position
-        positionX: "10vw", // Window Position X (when first opened)
+        positionX: "75vw", // Window Position X (when first opened)
         positionY: "15vh", // Window Position Y (when first opened)
-        iconImage: "resume.png", // Window Icon Image
+        iconImage: "menu.png", // Window Icon Image
         altText: "Résumé", // Window Icon Alt Text
         fullscreen: false // Window Fullscreen State [true, false]
       },
-      {
-        windowId: "PhotosWindow", 
-          windowState: "close",
-          displayName: "Photos",
-          windowComponent: 'window',
-          windowContent: 'photos',
-          windowContentPadding: {
-            top: '10px',
-            right: '10px',
-            bottom: '10px',
-            left: '10px'
-          },
-          position: "absolute",
-          positionX: "6vw",
-          positionY: "12vh",
-          iconImage: "photos.png",
-          altText: "Photos",
-          fullscreen: false
-      },
-      {
-        windowId: "NOSSAFLEXWindow", 
-          windowState: "close",
-          displayName: "NOSSAFLEX",
-          windowComponent: 'window',
-          windowContent: 'nossaflex',
-          windowContentPadding: {
-            top: null,
-            right: null,
-            bottom: null,
-            left: null
-          },
-          position: "absolute",
-          positionX: "6vw",
-          positionY: "12vh",
-          iconImage: "noss.webp",
-          altText: "NOSSAFLEX App",
-          fullscreen: false
-      },
-      {
-        windowId: "AppleWWDC2021", 
-          windowState: "close",
-          displayName: "WWDC 2021",
-          windowComponent: 'window',
-          windowContent: 'wwdc2021',
-          windowContentPadding: {
-            top: null,
-            right: null,
-            bottom: null,
-            left: null
-          },
-          position: "absolute",
-          positionX: "4vw",
-          positionY: "12vh",
-          iconImage: "apple.png",
-          altText: "Apple WWDC 2021",
-          fullscreen: false
-      },
-      {
-        windowId: "AppleWWDC2022", 
-          windowState: "close",
-          displayName: "WWDC 2022",
-          windowComponent: 'window',
-          windowContent: 'wwdc2022',
-          windowContentPadding: {
-            top: null,
-            right: null,
-            bottom: null,
-            left: null
-          },
-          position: "absolute",
-          positionX: "4vw",
-          positionY: "12vh",
-          iconImage: "apple2.png",
-          altText: "Apple WWDC 2022",
-          fullscreen: false
-      },
-      {
-        windowId: "OpenSourceWindow", 
-          windowState: "close",
-          displayName: "Open Source",
-          windowComponent: 'window',
-          windowContent: 'opensource',
-          windowContentPadding: {
-            top: null,
-            right: '15px',
-            bottom: null,
-            left: '15px'
-          },
-          position: "absolute",
-          positionX: "6vw",
-          positionY: "12vh",
-          iconImage: "opensource.png",
-          altText: "Open Source Projects",
-          fullscreen: false
-      },
+     
       {
         windowId: "MailWindow", 
           windowState: "close",
@@ -170,30 +76,211 @@ export default new Vuex.Store({
           altText: "Mail",
           fullscreen: false
       },
+
       {
-        windowId: "WebOSWindow", 
+        windowId: "OpenSourceWindow", 
           windowState: "close",
-          displayName: "Web OS",
-          windowComponent: 'webos',
-          windowContent: '',
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
           windowContentPadding: {
-            top: '0',
-            right: '0',
-            bottom: '0',
-            left: '0'
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
           },
           position: "absolute",
           positionX: "6vw",
           positionY: "12vh",
-          iconImage: "webos.png",
-          altText: "Web OS",
-          fullscreen: true
-      }
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+      {
+        windowId: "OpenSourceWindow", 
+          windowState: "close",
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
+          windowContentPadding: {
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
+          },
+          position: "absolute",
+          positionX: "6vw",
+          positionY: "12vh",
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+      {
+        windowId: "OpenSourceWindow", 
+          windowState: "close",
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
+          windowContentPadding: {
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
+          },
+          position: "absolute",
+          positionX: "6vw",
+          positionY: "12vh",
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+      {
+        windowId: "OpenSourceWindow", 
+          windowState: "close",
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
+          windowContentPadding: {
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
+          },
+          position: "absolute",
+          positionX: "6vw",
+          positionY: "12vh",
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+      {
+        windowId: "OpenSourceWindow", 
+          windowState: "close",
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
+          windowContentPadding: {
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
+          },
+          position: "absolute",
+          positionX: "6vw",
+          positionY: "12vh",
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+      {
+        windowId: "OpenSourceWindow", 
+          windowState: "close",
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
+          windowContentPadding: {
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
+          },
+          position: "absolute",
+          positionX: "6vw",
+          positionY: "12vh",
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+      {
+        windowId: "OpenSourceWindow", 
+          windowState: "close",
+          displayName: "Directions",
+          windowComponent: 'window',
+          windowContent: 'opensource',
+          windowContentPadding: {
+            top: null,
+            right: '15px',
+            bottom: null,
+            left: '15px'
+          },
+          position: "absolute",
+          positionX: "6vw",
+          positionY: "12vh",
+          iconImage: "maps.png",
+          altText: "Open Source Projects",
+          fullscreen: false
+      },
+
+      
       // register your new windows here
+      {
+        windowId: "ResumeWindow", // same ID as ResumeWindow
+        windowState: "close",
+        displayName: "", // change the display name if needed
+        windowComponent: 'menington',
+        windowContent: '', // same content as ResumeWindow
+        windowContentPadding: {
+          top: '0',
+          right: '0',
+          bottom: '0',
+          left: '0'
+        },
+        position: "absolute",
+        positionX: "27vw", // change the position if needed
+        positionY: "11vh", // change the position if needed
+        iconImage: "blend.png", // same icon as ResumeWindow
+        altText: "Another Résumé", // change the alt text if needed
+        fullscreen: false,
+        showInNavbar: false
+      },
+      {
+        windowId: "ResumeWindow", // unique ID for the second resume window
+        windowState: "close",
+        displayName: "", // change the display name if needed
+        windowComponent: 'menud',
+        windowContent: '', // same content as ResumeWindow
+        windowContentPadding: {
+          top: '0',
+          right: '0',
+          bottom: '0',
+          left: '0'
+        },
+        position: "absolute",
+        positionX: "10vw", // change the position if needed
+        positionY: "15vh", // change the position if needed
+        iconImage: "blend.png", // same icon as ResumeWindow
+        altText: "Yet Another Résumé", // change the alt text if needed
+        fullscreen: false,
+        showInNavbar: false
+        
+      },
+      {
+        windowId: "ResumeWindow", // unique ID for the second resume window
+        windowState: "close",
+        displayName: "", // change the display name if needed
+        windowComponent: 'menud',
+        windowContent: '', // same content as ResumeWindow
+        windowContentPadding: {
+          top: '0',
+          right: '0',
+          bottom: '0',
+          left: '0'
+        },
+        position: "absolute",
+        positionX: "10vw", // change the position if needed
+        positionY: "15vh", // change the position if needed
+        iconImage: "blend.png", // same icon as ResumeWindow
+        altText: "Yet Another Résumé", // change the alt text if needed
+        fullscreen: false,
+        showInNavbar: false
+        
+      },
+      
+     
     ],
     mailContent: '',
     mailSender: '',
-    mailSubject: 'New Message',
+    mailSubject: 'Contact Us',
   },
   mutations: {
     // Active Window Mutator
@@ -204,7 +291,9 @@ export default new Vuex.Store({
 
     // Pushes Active Window onto Active Windows Array
     pushActiveWindow(state, window) {
+      if (window.showInNavbar == true) {
       state.activeWindows.push(window)
+      }
     },
 
     // Removes Active Window from Active Windows Array

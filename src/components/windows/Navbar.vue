@@ -2,35 +2,24 @@
 <nav class="navbar-container">
     <div alt="start" class="start-menu" v-on:click="$store.commit('setActiveWindow', 'Menu')" :class="$store.getters.getActiveWindow=='Menu' ? 'start-menu-depressed' : 'start-menu'">
         <div class="" :class="$store.getters.getActiveWindow=='Menu' ? 'border' : 'container-border'">
-            <img class="start-icon" src="@/assets/win95.png"/>
-                <button style="padding-left: 3px; font-size: 0.9rem; font-weight: bold;">Start</button>
+            <img class="start-icon" src="https://i.imgur.com/0hcVoV2.png"/>
+                <button style="padding-left: 3px; font-size: 0.9rem; font-weight: bold;"></button>
                 </div>
         </div>
-    <div 
-        v-for="window in this.activeWindows" 
-        :key="window.key"
-    >
-        <button 
-            v-if="$store.getters.getActiveWindow!==window.windowId && (window.windowState=='open' || window.windowState=='minimize')" v-on:click="openWindow(window.windowId)" 
-            class="navbar-item open"> 
-                <img class="icon-image" :src="require('@/assets/win95Icons/' + window.iconImage)" :alt="window.altText"/>
-                <p>{{window.displayName}}</p>
-        </button>
-        <button 
-            v-if="$store.getters.getActiveWindow==window.windowId" 
-            v-on:click="openWindow(window.windowId)" 
-            class="navbar-item-depressed">
-            <img class="icon-image" :src="require('@/assets/win95Icons/' + window.iconImage)" :alt="window.altText"/>
-                <p>{{window.displayName}}</p>
-        </button>
-    </div>
+    
     <div class="spacer"></div>
-    <div alt="time" class="time">
-        <img src="@/assets/speakers.png" class="icon-image"/>
-        <time>
-            {{time}}
-        </time>
-    </div>
+
+<div class="spotify-player">
+    <iframe style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/1xINbJobcTdfnGaJIQNRTM?utm_source=generator&theme=0" 
+            width="100%" 
+            height="152" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+    </iframe>
+</div>
 </nav>
 </template>
 
@@ -41,9 +30,9 @@
 
 .navbar-container {
     width: 100%;
-    height: 35px;
-    background: rgb(192, 192, 192);
-    border-top: solid rgb(250, 250, 250) 2px;
+    height: 50px;
+    background: #292829;
+    border-top: solid #292829 2px;
     z-index: 100;
     display: flex;
     flex-direction: row;
@@ -115,20 +104,20 @@
 }
 
 .start-icon {
-    width: 18px;
-    height: 18px;
+    width: 60px;
+    height: 50px;
 }
 
 .start-menu {
-    width: 65px;
-    margin: 5px;
-    height: 25px;
-    box-shadow: 1.5px 1.5px black;
-    border-top: solid rgb(250, 250, 250) 1.5px;
-    border-left: solid rgb(250, 250, 250) 1.5px;
-    border-bottom: solid rgb(90, 90, 90) 1.5px;
-    border-right: solid rgb(90, 90, 90) 1.5px;
-    background: rgb(192, 192, 192);
+    width: 70px;
+    margin: 1px;
+    height: 50px;
+    box-shadow: 1.5px 1.5px rgb(65, 63, 63);
+    border-top: solid rgb(83, 81, 81) 1.5px;
+    border-left: solid rgb(83, 80, 80) 1.5px;
+    border-bottom: solid rgb(79, 76, 76) 1.5px;
+    border-right: solid rgb(74, 73, 73) 1.5px;
+    background: #3e3d3e;
 
     display: flex;
     /* justify-content: space-between; */
@@ -176,12 +165,19 @@
     Utilities
 \*-------------------------------------------*/
 
-.icon-image {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    margin-top: 0; 
-    margin-bottom: 0;
+
+.spotify-player {
+    width: 20%;
+    height: 150px;
+    position: relative;
+    top: -50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: none;
+    overflow: hidden;
 }
 
 .spacer {
@@ -189,9 +185,9 @@
 }
 
 .time {
-    width: 75px;
-    margin: 5px;
-    height: 25px;
+    width: 100px;
+    margin: 1px;
+    height: 50px;
     background: rgb(192, 192, 192);
     border-right: solid rgb(250, 250, 250) 1.5px;
     border-bottom: solid rgb(250, 250, 250) 1.5px;

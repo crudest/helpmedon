@@ -1,10 +1,9 @@
 <template>
 <nav 
-    class="grid-container"
-    :style="{height: gridHeight}"
+
 >
     <li v-for="window in windows" :key="window.key">
-        <button class="icon" @touchstart="openWindow(window.windowId)" @dblclick="openWindow(window.windowId)">
+        <button v-if="window.showInNavbar !=false" class="icon" @touchstart="openWindow(window.windowId)" @dblclick="openWindow(window.windowId)">
             <img class="icon-image" :src="require('../assets/win95Icons/' + window.iconImage)" :alt="window.altText" />
             <div class="border">
             <p class="icon-text">
@@ -59,8 +58,7 @@ export default {
         }
     },
     mounted() {
-        let gridH =  this.$store.getters.getFullscreenWindowHeight
-        this.gridHeight = gridH.substring(0, gridH.length - 2) - 60 + 'px'
+       
     },
 }
 </script>

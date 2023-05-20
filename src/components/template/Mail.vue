@@ -1,7 +1,7 @@
 <template>
 <interact draggable :dragOption="dragOption" resizable :resizeOption="resizeOption" class="window window-style" :style="style" @dragmove="dragmove" @resizemove="resizemove" @click.native="setActiveWindow" :class="{ fullscreen: $store.getters.getWindowFullscreen(this.ComponentName), minimize: $store.getters.getWindowById(ComponentName).windowState=='minimize'}">
     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(this.submitted)  {window.location='';}"></iframe>
-    <form v-on:submit="sendEmail" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdRBqHB0Z6GOjwE3jniX8-fHfJK-WcyzNTmkPFg4fg2SYPwpA/formResponse" class="window" id="container" target="hidden_iframe">
+    <form v-on:submit="sendEmail" action="https://docs.google.com/forms/d/e/1FAIpQLScIkOdyISmdEmfmcJfSETx6Yt0PbIxOumP_UguWTxLkYlox6A/formResponse" class="window" id="container" target="hidden_iframe">
     <div class="top-bar-window" :class="$store.getters.getActiveWindow==this.ComponentName ? 'top-bar' : 'top-bar-deactivated'" id="top-bar" @dblclick="toggleWindowSize">
         <div class="window-name"><img class="icon-image" :src="require('@/assets/win95Icons/' + this.window.iconImage)" :alt="window.altText" />{{this.window.displayName}}</div>
         <div class="triple-button">
@@ -30,21 +30,22 @@
                 <hr>
                 <div class="subject-container">
                     <p style="margin: 8px;">To:</p>
-                    <div class="receipient">Don</div>
+                    <div class="receipient">Spudnik Donuts</div>
                 </div>
                 <hr>
                 <div class="subject-container">
                     <p style="margin: 8px;">Subject:</p>
-                    <input name="entry.609946071" class="subject" v-model="mailSubject" v-on:input="onChangeMailSubject" type="text" required="true" />
+                    <input name="entry.679555687" class="subject" v-model="mailSubject" v-on:input="onChangeMailSubject" type="text" required="true" />
                 </div>
                 <hr>
                 <div class="from-container" style="margin-bottom: 8px;">
                     <p style="margin: 8px;">From:</p>
-                    <input name="entry.367924729" class="subject" v-model="mailSender" v-on:input="onChangeMailSender" type="email" required="true" />
+                    <input name="entry.2051391533" class="subject" v-model="mailSender" v-on:input="onChangeMailSender" type="email" required="true" />
                 </div>
             </div>
 
-            <textarea name="entry.863594021" v-model="mailContent" v-on:input="onChangeMailContent" required="true"></textarea>
+            <textarea name="entry.1101483973" v-model="mailContent" v-on:input="onChangeMailContent" required="true" placeholder="l need... donuts...."></textarea>
+
     </div>
     </form>
 </interact>

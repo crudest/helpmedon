@@ -8,11 +8,6 @@
     flex-wrap: wrap;
     width: 0;
     height: 200px !important;
-    margin-top: 10px;
-    position: absolute;
-  top: 35%;
-  left: 36%;
-  transform: translate(-50%, -50%);
 }
 
 /*-------------------------------------------*\
